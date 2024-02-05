@@ -34,11 +34,11 @@ const SignIn = () => {
   const { handleSubmit, control, formState } = form;
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-  const res = await signIn("credentials", {
-        email: values.email,
-        password: values.password,
-        redirect: false
-    })
+    const res = await signIn("credentials", {
+      email: values.email,
+      password: values.password,
+      redirect: false,
+    });
     console.log(res);
   }
 
@@ -46,7 +46,6 @@ const SignIn = () => {
     <div className="flex justify-center items-center h-screen">
       <div className="w-[715px] h-[620px] bg-[#F0F1F3] flex flex-col justify-center items-center">
         <div className="mb-6">
-          <Image src="/Logo.png" alt="img" width={50} height={50} />
         </div>
         <h1 className="font-semibold text-[22px] mb-6">Welcome Back</h1>
 
@@ -62,7 +61,7 @@ const SignIn = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-[#24272F] font-normal">
-                      Email 
+                      Email
                     </FormLabel>
                     <FormControl>
                       <Input

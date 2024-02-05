@@ -2,12 +2,13 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import {signIn} from "next-auth/react"
+import Navbar from '@/components/Navbar'
 
 
 const page = () => {
   return (
-    <main className='flex min-h-screen justify-center items-center '>
-        <Button onClick={() => signIn()}>Sign In</Button>
+    <main >
+        <Navbar />
     </main>)
 }
 

@@ -16,7 +16,10 @@ const SigninButton = () => {
     );
   }
   return (
-    <Button onClick={() => signIn("google")} className="w-full mb-2 bg-transparent border border-[#24272F] text-[#24272F] hover:bg-transparent ">
+    <Button
+      onClick={() => signIn("google")}
+      className="bg-white border border-[#24272F] text-[#24272F] hover:bg-transparent hover:border-[#858b99] hover:text-white font-semibold "
+    >
       Sign In with Google
     </Button>
   );
